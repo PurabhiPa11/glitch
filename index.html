@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GLITCH // System Failure</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="scanlines"></div>
+
+    <main class="game-shell">
+
+        <header class="topbar">
+
+            <div class="brand">
+                <span class="brand-symbol">/</span>
+                <span>GLITCH</span>
+                <span class="brand-version">v1.0</span>
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </div>
+
+        </header>
+
+
+        <section class="game-container">
+
+            <canvas id="gameCanvas"></canvas>
+
+            <div class="hud">
+
+                <div class="hud-block">
+                    <span class="hud-label">SCORE</span>
+                    <span id="score">000000</span>
+                </div>
+
+                <div class="hud-block center-hud">
+                    <span class="hud-label">SYSTEM INTEGRITY</span>
+
+                    <div class="integrity-bar">
+                        <div id="integrityFill"></div>
+                    </div>
+                </div>
+
+                <div class="hud-block right-hud">
+                    <span class="hud-label">LEVEL</span>
+                    <span id="level">01</span>
+                </div>
+
+            </div>
+
+
+            <div id="glitchWarning" class="glitch-warning">
+                SYSTEM INSTABILITY DETECTED
+            </div>
+
+
+            <div id="startScreen" class="overlay">
+
+                <div class="menu-content">
+
+                    <div class="small-label">SYSTEM // 404</div>
+
+                    <h1>GLITCH<span>_</span></h1>
+
+                    <p class="tagline">
+                        THE SYSTEM WAS NEVER MEANT TO BE STABLE.
+                    </p>
+
+                    <div class="menu-line"></div>
+
+                    <div class="instructions">
+
+                        <div>
+                            <span class="key">W A S D</span>
+                            <span>MOVE</span>
+                        </div>
+
+                        <div>
+                            <span class="key">ARROW KEYS</span>
+                            <span>MOVE</span>
+                        </div>
+
+                        <div>
+                            <span class="key">SPACE</span>
+                            <span>PAUSE</span>
+                        </div>
+
+                    </div>
+
+                    <button id="startButton">
+                        INITIALIZE SYSTEM
+                    </button>
+
+                    <p class="warning-text">
+                        WARNING: REALITY MAY BECOME UNSTABLE
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="gameOverScreen" class="overlay hidden">
+
+                <div class="menu-content">
+
+                    <div class="small-label">CONNECTION TERMINATED</div>
+
+                    <h2>SYSTEM<br><span>COLLAPSED</span></h2>
+
+                    <div class="final-score">
+                        <span>FINAL SCORE</span>
+                        <strong id="finalScore">000000</strong>
+                    </div>
+
+                    <div class="final-stats">
+
+                        <div>
+                            <span>LEVEL</span>
+                            <strong id="finalLevel">01</strong>
+                        </div>
+
+                        <div>
+                            <span>FRAGMENTS</span>
+                            <strong id="finalFragments">00</strong>
+                        </div>
+
+                    </div>
+
+                    <button id="restartButton">
+                        REBOOT SYSTEM
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div id="pauseScreen" class="overlay hidden">
+
+                <div class="menu-content">
+
+                    <div class="small-label">SYSTEM SUSPENDED</div>
+
+                    <h2>PAUSED<span>_</span></h2>
+
+                    <p class="tagline">
+                        PRESS SPACE TO RESUME
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer class="footer">
+
+            <span>GLITCH ENGINE</span>
+
+            <span id="fpsCounter">60 FPS</span>
+
+            <span>
+                <span class="footer-status"></span>
+                REQUESTANIMATIONFRAME()
+            </span>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
